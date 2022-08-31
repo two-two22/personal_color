@@ -7,9 +7,19 @@ class Recommendation :
         
         self.personal_tone=personal_tone
         self.personal_season=personal_season
+
+        self.description(personal_tone, personal_season)
+        self.AI_keyword(personal_tone, personal_season)
+        self.recommend_palette(personal_tone, personal_season)
+        self.recommend_hair(personal_tone, personal_season)
+        self.recommend_cosmetics(personal_tone, personal_season)
+        self.same_star(personal_tone, personal_season)
+
+    def description(self, personal_tone, personal_season):
+        print('설명')
+        if (personal_tone=='warm'):
+            print('웜톤의 특징')
         
-
-
     def same_star(self,personal_tone,personal_season):
 
         print('나의 퍼스널 컬러와 같은 연예인 찾기')

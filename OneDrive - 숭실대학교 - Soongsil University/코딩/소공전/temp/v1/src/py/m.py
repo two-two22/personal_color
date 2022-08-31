@@ -3,6 +3,7 @@ import numpy as np
 import face_detection
 import dominant_color
 import exam_personal_color
+import recommendation
 
 
 ################################
@@ -12,7 +13,7 @@ import exam_personal_color
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
 
-image = '../photo/gosoo.jpg'
+image = './test_img/spring_light2.jpg'
 
 df=face_detection.FacePartDetection(image)
 
@@ -38,6 +39,9 @@ skin = np.mean([face_color[0], face_color[1],face_color[6]], axis=0)
 eyebrow = np.mean([face_color[2], face_color[3]], axis=0)
 eye = np.mean([face_color[4], face_color[5]], axis=0)
 
+print("skin", skin)
+# skin [215.         199.66666667 189.        ]
+
 # 3. 퍼스널컬러 진단
 
 print('피부는 ',end=' ')
@@ -45,8 +49,7 @@ exam_personal_color.GetPersonalColor(skin)
 
 # 4. 상세 정보 및 추천
 
-
-
+recommendation.Recommendation(exam_personal_color.GetPersonalColor.personal_tone, exam_personal_color.GetPersonalColor.personal_season)
 
 
 
