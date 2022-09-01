@@ -1,0 +1,13 @@
+certifi==2022.6.15
+colormath==3.0.0
+decorator @ file:///home/conda/feedstock_root/build_artifacts/decorator_1641555617451/work
+dlib==19.24.0
+imutils==0.5.4
+joblib==1.1.0
+networkx==2.3
+numpy @ file:///D:/bld/numpy_1649806536290/work
+opencv-python==4.6.0.66
+scikit-learn==1.0.2
+scipy==1.7.3
+threadpoolctl==3.1.0
+wincertstore==0.2
